@@ -40,4 +40,21 @@ In this project I show the process of how I have created and tested a model to c
 12) repeat steps 6 through 8 so that the new TF-IDF matrix has been created with all tokenized words in both the training and testing data
 13) perform cosine similarity of each description (text) and find highest matching (i.e. most similar) text
 14) for each description in the testing data assign it to the category it has the highest average cosine similarity
-15) 
+* In more words, I used my indexes of each labeled description from the training data to take each descripition in the training data and take the average similarity between the individual charge description and take its average cosine similarity between it and the all the labeled charges in the training data to each unfixed charge category. The category that has the highest average similarity ends up as the assigned category to the unlabeled description. The code to accomplish this is below. 
+```
+i = 1
+while(i<= nrow(total_description)){
+  
+  total_description$bar.similarity[i] = mean(total.similarities[i,bar.indexes])
+  total_description$grocery.similarity[i] = mean(total.similarities[i,grocery.indexes])
+  total_description$uber.similarity[i] = mean(total.similarities[i,uber.indexes])
+  total_description$misc.similarity[i] = mean(total.similarities[i,misc.indexes])
+  total_description$juul.similarity[i] = mean(total.similarities[i,juul.indexes])
+  total_description$eating_out.similarity[i] = mean(total.similarities[i,eating_out.indexes])
+  total_description$gas.similarity[i] = mean(total.similarities[i,gas.indexes])
+  
+  i = i+1
+}
+
+```
+
