@@ -58,3 +58,7 @@ while(i<= nrow(total_description)){
 
 ```
 
+## Results  
+In a 20 fold cross validation, my method has an average accuracy of 92% in correctly classifying test data. 
+![CV results](https://user-images.githubusercontent.com/46107551/217437996-cb07cfee-316c-4035-be8b-9e3fbf5d7549.png)
+
