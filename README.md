@@ -65,5 +65,6 @@ In a 20 fold cross validation, my method has an average accuracy of 92% in corre
 
 ## Visualizing The Final Personal Expesne Labeling
 After my method has been validated & the code has been cleaned and runs from importing a new month to classifying all of the unfixed charges, I track how my money is spent using the table created below from the new R package mmtable2!
-![result table 2 5 2023](https://user-images.githubusercontent.com/46107551/217439303-0bacaa20-6b64-43a6-9b66-1b41daed0b0b.png)
+![result table 2 5 2023(2)](https://user-images.githubusercontent.com/46107551/217440758-139ac2f2-c0c4-4dd2-ba34-3ceee56e2762.png)
+
 
