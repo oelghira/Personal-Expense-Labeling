@@ -34,6 +34,7 @@ In this project I show the process of how I have created and tested a model to c
 6) clean descriptions (convert to lower case remove punctuation, remvoe stop words, remove numbers, etc.)
 7) tokenize cleaned & labeled training descriptions
 8) create TF-IDF matrix of labeled data
+* ![tf-idf matrix](https://user-images.githubusercontent.com/46107551/217439054-81514bd8-58c3-4eb7-a603-98b53c50f3d2.png)
 9) perform cosine similarity of each description (text) and find highest matching (i.e. most similar) text
 10) create indexes of labeled descriptions for each unfixed category in training data
 11) create dataset of descriptions & labeled categories from training & testing data
@@ -61,4 +62,8 @@ while(i<= nrow(total_description)){
 ## Results  
 In a 20 fold cross validation, my method has an average accuracy of 92% in correctly classifying test data. 
 ![CV results](https://user-images.githubusercontent.com/46107551/217437996-cb07cfee-316c-4035-be8b-9e3fbf5d7549.png)
+
+## Visualizing The Final Personal Expesne Labeling
+After my method has been validated & the code has been cleaned and runs from importing a new month to classifying all of the unfixed charges, I track how my money is spent using the table created below from the new R package mmtable2!
+![result table 2 5 2023](https://user-images.githubusercontent.com/46107551/217439303-0bacaa20-6b64-43a6-9b66-1b41daed0b0b.png)
 
