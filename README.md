@@ -1,4 +1,3 @@
-# NEXT STEP! SHOW DIFFERENCE IN ACCURACY OF CATEGORIZATION WITH EXAMPLE OF BEST & WORST PERFORMING CV's
 
 # Personal-Expense-Labeling
 In this project I show the process of how I have created and tested a model to categorize my personal expenses for my budget. The model is 92% accurate in categorizing my expenses. I've accomplished this by using TF-IDF to quantify the descriptions from my credit card and bank account exports and categorize new expenses by using cosine similarity to label new expenses each month. 
@@ -64,6 +63,10 @@ while(i<= nrow(total_description)){
 ## Cross Validation  
 In a 20 fold cross validation, my method has an average accuracy of 92% in correctly classifying test data. 
 ![CV results](https://user-images.githubusercontent.com/46107551/217437996-cb07cfee-316c-4035-be8b-9e3fbf5d7549.png)
+
+Below is table showing the accuracy of the 2 best and 2 worst performing categorizations of unfixed charges. Consistently eating_out and misc are the hardest unfixed charges to correctly classify. These low performing categories are a result of sparse and inconsistent data. When it comes to eating out at a resturant, I am a health nut and only go out to eat on rare occasions. When these rare occasions occur they take place at usually some place I have not been before. What this means is that there are not a lot of similar descriptions in my data at this time to improve accuracy using cosine similarity. The miscellaneous category has the problem of being applicable to too wide a range of unfixed charge descriptions everything from airline tickets to amazon purchases to a paypal or venmo purchase with a description that just says "VENMO" is included. As this category is meant to capture those one off purchases there will always be some percentage of charges that resemble another unfixed charge category. 
+![CV results - accuracy](https://user-images.githubusercontent.com/46107551/218004959-b3b8a0ef-f784-4085-80e2-929eb3f04442.png)
+
 
 ## Visualizing The Final Personal Expesne Labeling
 After my method has been validated & the code has been cleaned and runs from importing a new month to classifying all of the unfixed charges, I track how my money is spent using the table created below from the new R package mmtable2!
